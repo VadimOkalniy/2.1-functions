@@ -50,61 +50,41 @@ let data={
     c:[5,5,5,5,5,],
     b:[5,5],
     a:[5,5,5,5]}
-   
-    let m
-    let key
+   let key
+   let m
+    let k
     let sum
     sum=0
-    function getAverageMark(marks){
-      let data={
+
+    function getAverage(k){
+      sum=0;
+      for (i=0; i<k.length; i++){
+        sum=sum+k[i];
+      }
+       
+       return sum;
+    }
+    function getAverageMark(data){
+       data={
     c:[5,5,5,5,5],
     b:[5,5],
     a:[5,5,5,5]}
-    for (let key of Object.values(data))
-     {
-       //  console.log(key)
-           for (i=0; i<key.length; i++){
-           // console.log(key[i])
-           sum=sum+key[i]
-            console.log(sum)
-            console.log(key.length)
-         //    for (j=0; j<=key[i].lenght;j++){
-         // console.log(key[i])
-         //    }
-         }
-         }
+    
+       for (let k of Object.values(data)){
+        m=getAverage(k)
        
-    
+       
+         for ( let key in data){
+            m=getAverage(k)
+        
+          data[key]=m
+       }
+       
+     
+ }
+  return data
+ 
     }
-    for (let key of Object.values(data)){
-      key=
-    }
-//      let sum
-//       sum=0
-//    for (let key of data){
-//        for(let i=0; i<=key.length; i++){
-//         sum=sum+key[i]
-//             return key;
-
-//     }
-//      return sum;
-//     }
-//       }
-//   function getAverageScore(data) {
-//     data={
-//       c:[5,5,5,5,5,],
-//       b:[5,5],
-//       a:[5,5,5,5]
     
-//     }
-  
-  
-   
-  
-// //  for (key in data){
-// //    key=getAverageMark(m)
-
-// //  }
-// //  return getAverageMark()
- // }
- console.log(getAverageMark(data))
+//     
+  console.log(getAverageMark(data))
